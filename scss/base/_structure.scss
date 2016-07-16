@@ -1,0 +1,10 @@
+body {
+  padding-top: 80px;
+}
+
+// h`s
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-weight: bold;
+  }
+}

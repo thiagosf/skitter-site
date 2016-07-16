@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skitter &#149; Slideshow for anytime</title>
-    <link href="css/styles.css" type="text/css" media="all" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+    <link href="/css/styles.css" type="text/css" media="all" rel="stylesheet" />
   </head>
   <body>
-    <nav>
+    <!-- <nav>
   <ul>
     <li><a href="#">Link 1</a></li>
     <li><a href="#">Link 2</a></li>
@@ -17,7 +18,69 @@
 
     
   <h1>Skitter</h1>
+ -->
 
-    <script src="js/app.js"></script>
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar icon-bar-change"></span>
+          </button>
+          <a href="#" class="github-link">
+            <img src="/svgs/github.svg" alt="Github">
+          </a>
+          <a class="navbar-brand" href="/">
+            <img src="/svgs/logo.svg" alt="Skitter">
+          </a>
+          <span class="site-title">
+            <strong>Skitter</strong>
+            Slideshow for anytime
+          </span>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Install</a></li>
+            <li><a href="#about">Options</a></li>
+            <li><a href="#contact">Events</a></li>
+            <li><a href="#contact">Updates</a></li>
+            <li><a href="#contact">Customizations</a></li>
+            <li><a href="#contact">Comments</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="skitter skitter-large with-dots">
+      <ul>
+        <li>
+          <a href="#cut"><img src="https://visualhunt.com/photos/l/1/dawn-sun-mountain-landscape.jpg" class="cut" /></a>
+          <div class="label_text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#see-more" class="btn btn-xs btn-warning">See more</a></p>
+          </div>
+        </li>
+        <li>
+          <a href="#swapBlocks"><img src="https://visualhunt.com/photos/l/1/aurora-borealis-over-mountains-at-night.jpg" class="swapBlocks" /></a>
+          <div class="label_text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#see-more" class="btn btn-xs btn-warning">See more</a></p>
+          </div>
+        </li>
+        <li>
+          <a href="#swapBarsBack"><img src="https://visualhunt.com/photos/l/1/tourists-on-top-of-rock.jpg" class="swapBarsBack" /></a>
+          <div class="label_text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#see-more" class="btn btn-xs btn-warning">See more</a></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="container-fluid">
+      <p><strong>Skitter</strong> is a jQuery slider responsive with multiple options transitions and customizations.</p>
+      <h2>Install</h2>
+      <p><strong>Bower</strong></p>
+    </div>
+
+    <script src="/js/vendor.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>

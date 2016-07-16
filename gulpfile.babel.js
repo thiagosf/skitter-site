@@ -30,8 +30,20 @@ const config = {
   }
 }
 
+// Vendor
+gulp.task('vendor', function () {
+  return gulp.src([
+      './bower_components/jquery/dist/jquery.min.js',
+      './bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+      './bower_components/jquery.easing/js/jquery.easing.min.js',
+      './bower_components/skitter-slideshow/dist/jquery.skitter.min.js',
+    ])
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest(config.js.outputDir))
+});
+
 // Scripts
-function bundle() {
+const bundle = () => {
   return b.bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source(config.js.outputFile))
@@ -88,7 +100,7 @@ gulp.task('template:watch', () => {
 })
 
 // Webserver
-gulp.task('ws', ['sass:watch', 'template:watch', 'scripts'], () => {
+gulp.task('ws', ['vendor', 'sass:watch', 'template:watch', 'scripts'], () => {
   return gulp.src('public')
     .pipe(webserver({
       host: '0.0.0.0',
