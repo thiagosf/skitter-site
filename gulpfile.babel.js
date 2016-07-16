@@ -37,6 +37,7 @@ gulp.task('vendor', function () {
       './bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
       './bower_components/jquery.easing/js/jquery.easing.min.js',
       './bower_components/skitter-slideshow/dist/jquery.skitter.min.js',
+      './bower_components/prism/prism.js',
     ])
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest(config.js.outputDir))

@@ -71,7 +71,10 @@
       font-size: 20px;
       line-height: 1.5;
       padding: 10px 20px;
-      &:hover {
+      color: black;
+      &:hover,
+      &:active,
+      &:focus {
         background: transparent;
         color: $green;
       }
