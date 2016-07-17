@@ -2,7 +2,6 @@ body {
   padding-top: 80px;
 }
 
-// h`s
 @for $i from 1 through 6 {
   h#{$i} {
     font-weight: bold;
@@ -13,4 +12,29 @@ pre.language {
   padding: 10px;
   border: 0;
   border-radius: 2px;
+  margin: 0 0 20px 0;
+}
+
+p.text-large {
+  font-size: 18px;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+.small-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(white, .7);
+  .banner {
+    height: 70px;
+    background: black;
+    margin: 1px;
+    color: white;
+    text-align: center;
+    line-height: 4;
+  }
 }

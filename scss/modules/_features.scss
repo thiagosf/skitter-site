@@ -1,0 +1,16 @@
+.features-box {
+  margin: 40px 0 0 0;
+  .item-feature {
+    text-align: center;
+    margin: 0 0 40px 0;
+    img {
+      height: 100px;
+      display: inline-block;
+    }
+    .title {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+}

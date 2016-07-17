@@ -1,0 +1,23 @@
+footer.main-footer {
+  background: $green;
+  color: white;
+  text-align: center;
+  div {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    span {
+      &.phrase {
+        font-style: italic;
+        font-size: 16px;
+      }
+      &.smile {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        transform: rotate(90deg);
+        font-weight: bold;
+      }
+    }
+  }
+}
