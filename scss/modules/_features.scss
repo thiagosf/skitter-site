@@ -6,11 +6,17 @@
     img {
       height: 60px;
       display: inline-block;
+      @media (min-width: $screen-md-min) {
+        height: 100px;
+      }
     }
     .title {
       margin-top: 20px;
       font-size: 16px;
       line-height: 1;
+      @media (min-width: $screen-md-min) {
+        font-size: 24px;
+      }
     }
   }
 }

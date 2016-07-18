@@ -3,191 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title | safe }}</title>
+    <title>{% if sub_title %}{{ sub_title }} &#149; {{ small_title | safe }}{% else %}{{ title | safe }}{% endif %}</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
     <link href="/css/styles.css" type="text/css" media="all" rel="stylesheet" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" >
   </head>
   <body>
-    <!-- {% include "partials/nav.html" %}
-    {% block content %}{% endblock %} -->
-
-    <nav class="navbar navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar icon-bar-change"></span>
-          </button>
-          <a href="#" class="github-link">
-            <img src="/svgs/github.svg" alt="Github">
-          </a>
-          <a class="navbar-brand" href="/">
-            <img src="/svgs/logo.svg" alt="Skitter">
-          </a>
-          <span class="site-title">
-            <strong>Skitter</strong>
-            Slideshow for anytime
-          </span>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="visible-xs active"><a href="#">Install</a></li>
-            <li class="visible-xs"><a href="#about">Options</a></li>
-            <li class="visible-xs"><a href="#contact">Events</a></li>
-            <li class="visible-xs"><a href="#contact">Updates</a></li>
-            <li class="visible-xs"><a href="#contact">Customizations</a></li>
-            <li class="visible-xs"><a href="#contact">Comments</a></li>
-            <li class="hidden-xs">
-              <a href="#" class="github-link github-md-link">
-                <small class="hidden-xs">
-                  Fork me on <br>
-                  <strong>GitHub</strong>
-                </small>
-                <img src="/svgs/github.svg" alt="Github">
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    {% include "partials/top_nav.html" %}
 
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-sm-3 col-md-2 hidden-xs">
-          <ul class="nav navbar-md-nav">
-            <li class=" active"><a href="#">Install</a></li>
-            <li><a href="#about">Options</a></li>
-            <li><a href="#contact">Events</a></li>
-            <li><a href="#contact">Updates</a></li>
-            <li><a href="#contact">Customizations</a></li>
-            <li><a href="#contact">Comments</a></li>
-          </ul>
+          {% include "partials/sidebar.html" %}
         </div>
         <div class="col-xs-12 col-sm-9 col-md-10">
-          <div class="skitter-box">
-            <div class="skitter skitter-large with-dots">
-              <ul>
-                <li>
-                  <a href="#cut"><img src="https://placeholdit.imgix.net/~text?txtsize=100&txt=1&w=1280&h=400" class="cut" /></a>
-                  <div class="label_text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#see-more" class="btn btn-xs btn-warning">See more</a></p>
-                  </div>
-                </li>
-                <li>
-                  <a href="#swapBlocks"><img src="https://placeholdit.imgix.net/~text?txtsize=100&txt=2&w=1280&h=400" class="swapBlocks" /></a>
-                  <div class="label_text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#see-more" class="btn btn-xs btn-warning">See more</a></p>
-                  </div>
-                </li>
-                <li>
-                  <a href="#swapBarsBack"><img src="https://placeholdit.imgix.net/~text?txtsize=100&txt=3&w=1280&h=400" class="swapBarsBack" /></a>
-                  <div class="label_text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#see-more" class="btn btn-xs btn-warning">See more</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="container-fluid">
-            <p class="text-large"><strong>Skitter</strong> is a jQuery slider responsive with multiple options transitions and customizations.</p>
-
-            <div class="features-box">
-              <div class="row">
-                <div class="col-xs-6 col-sm-4">
-                  <div class="item-feature">
-                    <img src="/svgs/feature-animations.svg">
-                    <div class="title">
-                      Many <strong>animations</strong>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4">
-                  <div class="item-feature">
-                    <img src="/svgs/feature-responsive.svg">
-                    <div class="title">
-                      <strong>Responsive</strong> support
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4">
-                  <div class="item-feature">
-                    <img src="/svgs/feature-options.svg">
-                    <div class="title">
-                      Several <strong>options</strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <h2>Install</h2>
-            <p><strong>Bower</strong></p>
-            <pre class="language language-bash"><code>bower install skitter --save</code></pre>
-            <p><strong>Manually</strong></p>
-            <p>
-              Download <a href="https://github.com/thiagosf/SkitterSlideshow/archive/master.zip" title="Download ZIP">zip</a> and move files in <code>dist</code> directory for you application. <strong>Attention:</strong> you need to download the dependencies manually.
-            </p>
-            <p><strong>Head</strong></p>
-            <pre class="language language-html"><code>&lt;link href=&quot;dist/skitter.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; /&gt;
-
-&lt;script src=&quot;/js/jquery-2.1.1.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;/js/jquery.easing.1.3.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;/dist/jquery.skitter.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-            <p><strong>Markup</strong></p>
-      <pre class="language language-html"><code>&lt;div class=&quot;skitter skitter-large with-dots&quot;&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#cut&quot;&gt;&lt;img src=&quot;https://visualhunt.com/photos/l/1/dawn-sun-mountain-landscape.jpg&quot; class=&quot;cut&quot; /&gt;&lt;/a&gt;
-      &lt;div class=&quot;label_text&quot;&gt;
-        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;a href=&quot;#see-more&quot; class=&quot;btn btn-xs btn-warning&quot;&gt;See more&lt;/a&gt;&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#swapBlocks&quot;&gt;&lt;img src=&quot;https://visualhunt.com/photos/l/1/aurora-borealis-over-mountains-at-night.jpg&quot; class=&quot;swapBlocks&quot; /&gt;&lt;/a&gt;
-      &lt;div class=&quot;label_text&quot;&gt;
-        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;a href=&quot;#see-more&quot; class=&quot;btn btn-xs btn-warning&quot;&gt;See more&lt;/a&gt;&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;#swapBarsBack&quot;&gt;&lt;img src=&quot;https://visualhunt.com/photos/l/1/tourists-on-top-of-rock.jpg&quot; class=&quot;swapBarsBack&quot; /&gt;&lt;/a&gt;
-      &lt;div class=&quot;label_text&quot;&gt;
-        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;a href=&quot;#see-more&quot; class=&quot;btn btn-xs btn-warning&quot;&gt;See more&lt;/a&gt;&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-      <p><strong>Start</strong></p>
-      <pre class="language language-javascript"><code>$(funciton() {
-    $(&#039;.skitter-large&#039;).skitter();
-});</code></pre>
-            <h3>Links</h3>
-            <ul>
-              <li><a href="#">Options</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Updates</a></li>
-              <li><a href="#">Customizations</a></li>
-              <li><a href="#">Comments</a></li>
-            </ul>
-          </div>
+          {% block content %}{% endblock %}
         </div>
       </div>
     </div>
 
-    <footer class="main-footer">
-      <div class="container-fluid">
-        <span class="phrase">
-          Use for good
-        </span>
-        <span class="smile">: )</span>
-      </div>
-    </footer>
-
-    <div class="small-banner visible-xs">
-      <div class="banner">Banner</div>
-    </div>
+    {% include "partials/footer.html" %}
 
     <script src="/js/vendor.js"></script>
     <script src="/js/app.js"></script>

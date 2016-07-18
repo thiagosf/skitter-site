@@ -1,5 +1,69 @@
+{% set current_page = "home" %}
 {% extends "partials/base.html" %}
 
 {% block content %}
-  <h1>Skitter</h1>
+  <div class="skitter-box">
+    <div class="skitter skitter-large with-dots">
+      <ul>
+        <li>
+          <a href="#cut"><img src="https://placeholdit.imgix.net/~text?txtsize=100&txt=1&w=1280&h=400" class="cut" /></a>
+          <div class="label_text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#see-more" class="btn btn-xs btn-warning">See more</a></p>
+          </div>
+        </li>
+        <li>
+          <a href="#swapBlocks"><img src="https://placeholdit.imgix.net/~text?txtsize=100&txt=2&w=1280&h=400" class="swapBlocks" /></a>
+          <div class="label_text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#see-more" class="btn btn-xs btn-warning">See more</a></p>
+          </div>
+        </li>
+        <li>
+          <a href="#swapBarsBack"><img src="https://placeholdit.imgix.net/~text?txtsize=100&txt=3&w=1280&h=400" class="swapBarsBack" /></a>
+          <div class="label_text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#see-more" class="btn btn-xs btn-warning">See more</a></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <p class="text-large"><strong>Skitter</strong> is a jQuery slider responsive with multiple options transitions and customizations.</p>
+    <div class="features-box">
+      <div class="row">
+        <div class="col-xs-6 col-sm-4">
+          <div class="item-feature">
+            <img src="/svgs/feature-animations.svg">
+            <div class="title">
+              Many <strong>animations</strong>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div class="item-feature">
+            <img src="/svgs/feature-responsive.svg">
+            <div class="title">
+              <strong>Responsive</strong> support
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+          <div class="item-feature">
+            <img src="/svgs/feature-options.svg">
+            <div class="title">
+              Several <strong>options</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Start now!</h2>
+    <ul>
+      {% for page, item in nav %}
+        {% if page != "home" %}
+          <li><a href="{{ item.link }}">{{ item.label }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 {% endblock %}

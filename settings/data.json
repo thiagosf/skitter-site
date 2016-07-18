@@ -1,3 +1,20 @@
 {
-  "title": "Skitter &#149; Slideshow for anytime"
+  "title": "Skitter &#149; Slideshow for anytime",
+  "small_title": "Skitter",
+  "nav": {
+    "home": { "label": "Home", "link": "/" },
+    "install": { "label": "Install", "link": "/install.html" },
+    "options": { "label": "Options", "link": "/options.html" },
+    "events": { "label": "Events", "link": "/events.html" },
+    "themes": { "label": "Themes", "link": "/themes.html" },
+    "updatelog": { "label": "Updatelog", "link": "/updatelog.html" },
+    "comments": { "label": "Comments", "link": "/comments.html" }
+  },
+  "options": {
+    "numbers": {
+      "type": "boolean",
+      "default": "false",
+      "description": "Show number for navigation"
+    }
+  }
 }

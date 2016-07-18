@@ -1,0 +1,10 @@
+<ul class="nav navbar-md-nav">
+  {% for page, item in nav %}
+    <li class="{% if page == current_page %}active{% endif %}"><a href="{{ item.link }}">{{ item.label }}</a></li>
+  {% endfor %}
+</ul>
+<div class="sidebar-banner">
+  <div class="banner">
+    Banner
+  </div>
+</div>

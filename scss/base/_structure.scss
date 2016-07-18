@@ -1,5 +1,9 @@
 body {
   padding-top: 80px;
+  padding-bottom: 73px;
+  @media (min-width: $screen-sm-min) {
+    padding-bottom: 0;
+  }
 }
 
 @for $i from 1 through 6 {
@@ -24,7 +28,9 @@ ul, ol {
 }
 
 .small-banner {
+  display: none;
   position: fixed;
+  z-index: 1000;
   bottom: 0;
   left: 0;
   right: 0;
@@ -36,6 +42,22 @@ ul, ol {
     color: white;
     text-align: center;
     line-height: 4;
+  }
+}
+.sidebar-banner {
+  display: none;
+  margin-top: 20px;
+  position: fixed;
+  bottom: 1px;
+  right: 1px;
+  z-index: 1000;
+  .banner {
+    color: white;
+    height: 250px;
+    width: 250px;
+    background: black;
+    line-height: 14;
+    text-align: center;
   }
 }
 
