@@ -14,7 +14,9 @@
       text-decoration: none;
       background: $green;
       @media (min-width: $screen-md-min) {
-        animation: milk 400ms forwards ease-in-out;
+        img {
+          animation: milk 700ms forwards ease-in-out;
+        }
       }
     }
     img {
@@ -32,21 +34,27 @@
 
 @keyframes milk {
   0% {
-    transform: rotate3d(1, 1, 1, 0deg);
+    transform: scale(1) rotate(0deg);
   }
-  10% {
-    transform: rotate3d(1, 1, 1, -20deg);
-  }
-  20% {
-    transform: rotate3d(1, 1, 1, 15deg);
+  15% {
+    transform: scale(0.7) rotate(-40deg);
   }
   30% {
-    transform: rotate3d(1, 1, 1, -10deg);
+    transform: scale(1.2) rotate(30deg);
   }
-  40% {
-    transform: rotate3d(1, 1, 1, 5deg);
+  45% {
+    transform: scale(1.2) rotate(-20deg);
+  }
+  60% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  75% {
+    transform: scale(1.2) rotate(-10deg);
+  }
+  90% {
+    transform: scale(1.2) rotate(10deg);
   }
   100% {
-    transform: rotate3d(1, 1, 1, 0deg);
+    transform: scale(1) rotate(0deg);
   }
 }

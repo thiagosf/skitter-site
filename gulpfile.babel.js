@@ -40,8 +40,11 @@ gulp.task('vendor', function () {
       './bower_components/prism/prism.js',
     ])
     .pipe(concat('vendor.js'))
+    .pipe(minify({
+      ext: { min:'.min.js' }
+    }))
     .pipe(gulp.dest(config.js.outputDir))
-});
+})
 
 // Scripts
 const bundle = () => {
@@ -49,8 +52,6 @@ const bundle = () => {
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source(config.js.outputFile))
     .pipe(buffer())
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.js.outputDir))
 }
 const customOpts = {
@@ -114,4 +115,4 @@ gulp.task('ws', ['vendor', 'sass:watch', 'template:watch', 'scripts'], () => {
 })
 
 // Build
-gulp.task('dist', ['template', 'compress', 'sass'])
+gulp.task('dist', ['template', 'vendor', 'compress', 'sass'])
