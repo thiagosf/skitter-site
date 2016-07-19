@@ -5,16 +5,219 @@
     "home": { "label": "Home", "link": "/" },
     "install": { "label": "Install", "link": "/install.html" },
     "options": { "label": "Options", "link": "/options.html" },
-    "events": { "label": "Events", "link": "/events.html" },
+    "api": { "label": "API", "link": "/api.html" },
     "themes": { "label": "Themes", "link": "/themes.html" },
     "updatelog": { "label": "Updatelog", "link": "/updatelog.html" },
     "comments": { "label": "Comments", "link": "/comments.html" }
   },
   "options": {
+    "velocity": {
+      "label": "Velocity of animation",
+      "default": "1",
+      "accept": "0.0 to 2.0",
+      "type": "float"
+    },
+    "interval": {
+      "label": "Interval between transitions",
+      "default": "2500",
+      "accept": "integer",
+      "type": "integer"
+    },
+    "animation": {
+      "label": "Default animation",
+      "default": "null or defined in &lt;a&gt; class",
+      "accept": "...",
+      "type": "string"
+    },
     "numbers": {
-      "type": "boolean",
+      "label": "Numbers display",
+      "default": "true",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "navigation": {
+      "label": "Navigation display",
+      "default": "true",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "label": {
+      "label": "Label display",
+      "default": "true",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "easing_default": {
+      "label": "Easing default",
+      "default": "null",
+      "accept": "ease type",
+      "type": "string"
+    },
+    "thumbs": {
+      "label": "Navigation with thumbs",
       "default": "false",
-      "description": "Show number for navigation"
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "hideTools": {
+      "label": "Hide numbers and navigation",
+      "default": "false",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "fullscreen": {
+      "label": "Fullscreen mode",
+      "default": "false",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "xml": {
+      "label": "Loading data from XML file",
+      "default": "false",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "dots": {
+      "label": "Navigation with dots",
+      "default": "false",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "show_randomly": {
+      "label": "Randomly sliders",
+      "default": "false",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "onLoad": {
+      "label": "Callback",
+      "default": "null",
+      "accept": "function",
+      "type": "function"
+    },
+    "numbers_align": {
+      "label": "Alignment of numbers/dots/thumbs",
+      "default": "left",
+      "accept": "center, left, right",
+      "type": "string"
+    },
+    "preview": {
+      "label": "Preview with dots",
+      "default": "false",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "focus": {
+      "label": "Focus slideshow",
+      "default": "false",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "focus_position": {
+      "label": "Position of button focus slideshow",
+      "default": "center",
+      "accept": "center, leftTop, rightTop, leftBottom, rightBottom",
+      "type": "string"
+    },
+    "controls": {
+      "label": "Option play/pause manually",
+      "default": "false",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "controls_position": {
+      "label": "Position of button controls",
+      "default": "center",
+      "accept": "center, leftTop, rightTop, leftBottom, rightBottom",
+      "type": "string"
+    },
+    "enable_navigation_keys": {
+      "label": "Enable navigation keys",
+      "default": "false",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "with_animations": {
+      "label": "Specific animations to be used in random mode.",
+      "default": "[]",
+      "accept": "[\"paralell\", \"glassBlock\", \"swapBars\"]",
+      "type": "array"
+    },
+    "mouseOverButton": {
+      "label": "Function call to go over the navigation buttons",
+      "default": "function() { $(this).stop().animate({opacity:0.5}, 200); }",
+      "accept": "function() { $(this).stop().animate({opacity:0.2}, 500); }",
+      "type": "function"
+    },
+    "mouseOutButton": {
+      "label": "Function call to go out the navigation buttons",
+      "default": "function() { $(this).stop().animate({opacity:0.5}, 200); }",
+      "accept": "function() { $(this).stop().animate({opacity:0.2}, 500); }",
+      "type": "function"
+    },
+    "stop_over": {
+      "label": "Stop animation to move mouse over it.",
+      "default": "true",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "auto_play": {
+      "label": "Sets whether the slideshow will start automatically",
+      "default": "true",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "labelAnimation": {
+      "label": "Label animation type",
+      "default": "slideUp",
+      "accept": "slideUp, left, right, fixed",
+      "type": "string"
+    },
+    "imageSwitched": {
+      "label": "Function call to change image",
+      "default": "null",
+      "accept": "function",
+      "type": "function"
+    },
+    "progressbar": {
+      "label": "Displays progress bar",
+      "default": "false",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "progressbar_css": {
+      "label": "CSS progress bar",
+      "default": "false",
+      "accept": "true, false",
+      "type": "boolean"
+    },
+    "theme": {
+      "label": "Slideshow theme",
+      "default": "null",
+      "accept": "minimalist, round, clean, square",
+      "type": "string"
+    }
+  },
+  "api": {
+    "getAnimations": {
+      "label": "Get available animations",
+      "example": "$('.skitter-large').skitter('getAnimations')",
+      "return": "array"
+    },
+    "setAnimation": {
+      "label": "Set animation for all slides",
+      "example": "$('.skitter-large').skitter('setAnimation', 'fade')",
+      "return": "null"
+    },
+    "next": {
+      "label": "Next slide",
+      "example": "$('.skitter-large').skitter('next')",
+      "return": "null"
+    },
+    "prev": {
+      "label": "Previous slide",
+      "example": "$('.skitter-large').skitter('prev')",
+      "return": "null"
     }
   }
 }

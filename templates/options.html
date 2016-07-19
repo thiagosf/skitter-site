@@ -10,18 +10,20 @@
         <thead>
           <tr>
             <th>Parameter</th>
+            <th>Description</th>
             <th>Type</th>
             <th>Default</th>
-            <th>Description</th>
+            <th>Accept</th>
           </tr>
         </thead>
         <tbody>
-          {% for index, item in options %}
+          {% for parameter, item in options %}
             <tr>
-              <td>{{ index }}</td>
-              <td><code>{{ item.type }}</code></td>
-              <td><span class="label label-primary">{{ item.default }}</span></td>
-              <td>{{ item.description }}</td>
+              <td>{{ parameter }}</td>
+              <td><code>{{ item.label | safe }}</code></td>
+              <td><code>{{ item.type | safe }}</code></td>
+              <td><em>{{ item.default | safe }}</em></td>
+              <td>{{ item.accept | safe }}</td>
             </tr>
           {% endfor %}
         </tbody>

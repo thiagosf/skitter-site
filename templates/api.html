@@ -1,0 +1,31 @@
+{% set sub_title = "API" %}
+{% set current_page = "api" %}
+{% extends "partials/base.html" %}
+
+{% block content %}
+  <div class="main-content">
+    <h1>API</h1>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Description</th>
+            <th>Example</th>
+            <th>Return</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for parameter, item in api %}
+            <tr>
+              <td>{{ parameter }}</td>
+              <td>{{ item.label | safe }}</td>
+              <td><pre class="language language-javascript"><code><em>{{ item.example | safe }}</em></code></pre></td>
+              <td><code>{{ item.return | safe }}</code></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

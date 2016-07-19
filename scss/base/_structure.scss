@@ -27,59 +27,28 @@ ul, ol {
   padding-left: 20px;
 }
 
-.small-banner {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(white, .7);
-  .banner {
-    height: 70px;
-    background: black;
-    margin: 1px;
-    color: white;
-    text-align: center;
-    line-height: 4;
-  }
-}
-.sidebar-banner {
-  display: none;
-  margin-top: 20px;
-  position: fixed;
-  bottom: 1px;
-  right: 1px;
-  z-index: 1000;
-  .banner {
-    color: white;
-    height: 250px;
-    width: 250px;
-    background: black;
-    line-height: 14;
-    text-align: center;
-  }
-}
-
 .container-fluid {
-  // @media (min-width: $screen-sm-min) {
-  //   padding-left: 15px;
-  //   padding-right: 15px;
-  // }
   @media (min-width: $screen-lg-min) {
     max-width: 1280px;
   }
 }
-// .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-//   @media (min-width: $screen-sm-min) {
-//     padding-left: 15px;
-//     padding-right: 15px;
-//   }
-// }
+
+.btn-with-margin {
+  margin-bottom: 10px;
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: 20px;
+  }
+}
+
+.btn {
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 .skitter-large {
   max-width: 1280px;
 }
+
 .skitter-box {
   margin: 0 -20px;
   @media (min-width: $screen-sm-min) {

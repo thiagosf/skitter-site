@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Install &#149; Skitter</title>
+    <title>API &#149; Skitter</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
     <link href="/css/styles.css" type="text/css" media="all" rel="stylesheet" />
@@ -34,11 +34,11 @@
         
           <li class="visible-xs "><a href="/">Home</a></li>
         
-          <li class="visible-xs active"><a href="/install.html">Install</a></li>
+          <li class="visible-xs "><a href="/install.html">Install</a></li>
         
           <li class="visible-xs "><a href="/options.html">Options</a></li>
         
-          <li class="visible-xs "><a href="/api.html">API</a></li>
+          <li class="visible-xs active"><a href="/api.html">API</a></li>
         
           <li class="visible-xs "><a href="/themes.html">Themes</a></li>
         
@@ -68,11 +68,11 @@
   
     <li class=""><a href="/">Home</a></li>
   
-    <li class="active"><a href="/install.html">Install</a></li>
+    <li class=""><a href="/install.html">Install</a></li>
   
     <li class=""><a href="/options.html">Options</a></li>
   
-    <li class=""><a href="/api.html">API</a></li>
+    <li class="active"><a href="/api.html">API</a></li>
   
     <li class=""><a href="/themes.html">Themes</a></li>
   
@@ -98,54 +98,50 @@
         <div class="col-xs-12 col-sm-9 col-md-10">
           
   <div class="main-content">
-    <h1>Install</h1>
-    <p><strong>Bower</strong></p>
-    <pre class="language language-bash"><code>bower install skitter --save</code></pre>
-    <p><strong>Manually</strong></p>
-    <p>
-      Download <a href="https://github.com/thiagosf/SkitterSlideshow/archive/master.zip" title="Download ZIP">zip</a> and move files in <code>dist</code> directory for you application. <strong>Attention:</strong> you need to download the dependencies manually.
-    </p>
-    <p><strong>Head</strong></p>
-    <pre class="language language-html"><code>&lt;link href=&quot;dist/skitter.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; /&gt;
-
-&lt;script src=&quot;/js/jquery-2.1.1.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;/js/jquery.easing.1.3.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;/dist/jquery.skitter.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-    <p><strong>Markup</strong></p>
-<pre class="language language-html"><code>&lt;div class=&quot;skitter skitter-large with-dots&quot;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&quot;#cut&quot;&gt;&lt;img src=&quot;https://visualhunt.com/photos/l/1/dawn-sun-mountain-landscape.jpg&quot; class=&quot;cut&quot; /&gt;&lt;/a&gt;
-&lt;div class=&quot;label_text&quot;&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;a href=&quot;#see-more&quot; class=&quot;btn btn-xs btn-warning&quot;&gt;See more&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;#swapBlocks&quot;&gt;&lt;img src=&quot;https://visualhunt.com/photos/l/1/aurora-borealis-over-mountains-at-night.jpg&quot; class=&quot;swapBlocks&quot; /&gt;&lt;/a&gt;
-&lt;div class=&quot;label_text&quot;&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;a href=&quot;#see-more&quot; class=&quot;btn btn-xs btn-warning&quot;&gt;See more&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;#swapBarsBack&quot;&gt;&lt;img src=&quot;https://visualhunt.com/photos/l/1/tourists-on-top-of-rock.jpg&quot; class=&quot;swapBarsBack&quot; /&gt;&lt;/a&gt;
-&lt;div class=&quot;label_text&quot;&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. &lt;a href=&quot;#see-more&quot; class=&quot;btn btn-xs btn-warning&quot;&gt;See more&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-<p><strong>Start</strong></p>
-<pre class="language language-javascript"><code>$(funciton() {
-$(&#039;.skitter-large&#039;).skitter();
-});</code></pre>
-    <h3>Links</h3>
-    <ul>
-      <li><a href="#">Options</a></li>
-      <li><a href="#">Events</a></li>
-      <li><a href="#">Updates</a></li>
-      <li><a href="#">Customizations</a></li>
-      <li><a href="#">Comments</a></li>
-    </ul>
+    <h1>API</h1>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Description</th>
+            <th>Example</th>
+            <th>Return</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td>getAnimations</td>
+              <td>Get available animations</td>
+              <td><pre class="language language-javascript"><code><em>$('.skitter-large').skitter('getAnimations')</em></code></pre></td>
+              <td><code>array</code></td>
+            </tr>
+          
+            <tr>
+              <td>setAnimation</td>
+              <td>Set animation for all slides</td>
+              <td><pre class="language language-javascript"><code><em>$('.skitter-large').skitter('setAnimation', 'fade')</em></code></pre></td>
+              <td><code>null</code></td>
+            </tr>
+          
+            <tr>
+              <td>next</td>
+              <td>Next slide</td>
+              <td><pre class="language language-javascript"><code><em>$('.skitter-large').skitter('next')</em></code></pre></td>
+              <td><code>null</code></td>
+            </tr>
+          
+            <tr>
+              <td>prev</td>
+              <td>Previous slide</td>
+              <td><pre class="language language-javascript"><code><em>$('.skitter-large').skitter('prev')</em></code></pre></td>
+              <td><code>null</code></td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
   </div>
 
         </div>

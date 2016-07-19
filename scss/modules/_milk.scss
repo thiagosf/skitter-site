@@ -1,0 +1,52 @@
+.buy-me-a-milk {
+  margin-top: 20px;
+  a {
+    transition: all 300ms;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    border-radius: 2px;
+    color: white;
+    background: $blue;
+    font-style: italic;
+    font-size: 18px;
+    &:hover {
+      text-decoration: none;
+      background: $green;
+      @media (min-width: $screen-md-min) {
+        animation: milk 400ms forwards ease-in-out;
+      }
+    }
+    img {
+      width: 64px;
+      height: 64px;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+    small {
+      font-size: 12px;
+      display: block;
+    }
+  }
+}
+
+@keyframes milk {
+  0% {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  10% {
+    transform: rotate3d(1, 1, 1, -20deg);
+  }
+  20% {
+    transform: rotate3d(1, 1, 1, 15deg);
+  }
+  30% {
+    transform: rotate3d(1, 1, 1, -10deg);
+  }
+  40% {
+    transform: rotate3d(1, 1, 1, 5deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+}

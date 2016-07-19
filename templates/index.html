@@ -26,9 +26,8 @@
       </ul>
     </div>
   </div>
-
   <div class="main-content">
-    <p class="text-large"><strong>Skitter</strong> is a jQuery slider responsive with multiple options transitions and customizations.</p>
+    <p class="text-large"><strong>Skitter</strong> is a free jQuery slider responsive with a multiple animations and options.</p>
     <div class="features-box">
       <div class="row">
         <div class="col-xs-6 col-sm-4">
@@ -57,13 +56,19 @@
         </div>
       </div>
     </div>
+    <div class="visible-xs">
+      {% include "partials/milk.html" %}
+      <hr>
+    </div>
     <h2>Start now!</h2>
-    <ul>
+    <div class="row">
       {% for page, item in nav %}
         {% if page != "home" %}
-          <li><a href="{{ item.link }}">{{ item.label }}</a></li>
+          <div class="col-sm-6 col-md-4">
+            <a href="{{ item.link }}" class="btn btn-block btn-lg btn-warning btn-with-margin">{{ item.label }}</a>
+          </div>
         {% endif %}
       {% endfor %}
-    </ul>
+    </div>
   </div>
 {% endblock %}

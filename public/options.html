@@ -38,7 +38,7 @@
         
           <li class="visible-xs active"><a href="/options.html">Options</a></li>
         
-          <li class="visible-xs "><a href="/events.html">Events</a></li>
+          <li class="visible-xs "><a href="/api.html">API</a></li>
         
           <li class="visible-xs "><a href="/themes.html">Themes</a></li>
         
@@ -72,7 +72,7 @@
   
     <li class="active"><a href="/options.html">Options</a></li>
   
-    <li class=""><a href="/events.html">Events</a></li>
+    <li class=""><a href="/api.html">API</a></li>
   
     <li class=""><a href="/themes.html">Themes</a></li>
   
@@ -81,6 +81,13 @@
     <li class=""><a href="/comments.html">Comments</a></li>
   
 </ul>
+<div class="buy-me-a-milk">
+  <a href="#">
+    <img src="/svgs/milk.svg">
+    Buy me a <strong>milk!</strong>
+    <small>with paypal</small>
+  </a>
+</div>
 <div class="sidebar-banner">
   <div class="banner">
     Banner
@@ -97,18 +104,260 @@
         <thead>
           <tr>
             <th>Parameter</th>
+            <th>Description</th>
             <th>Type</th>
             <th>Default</th>
-            <th>Description</th>
+            <th>Accept</th>
           </tr>
         </thead>
         <tbody>
           
             <tr>
+              <td>velocity</td>
+              <td><code>Velocity of animation</code></td>
+              <td><code>float</code></td>
+              <td><em>1</em></td>
+              <td>0.0 to 2.0</td>
+            </tr>
+          
+            <tr>
+              <td>interval</td>
+              <td><code>Interval between transitions</code></td>
+              <td><code>integer</code></td>
+              <td><em>2500</em></td>
+              <td>integer</td>
+            </tr>
+          
+            <tr>
+              <td>animation</td>
+              <td><code>Default animation</code></td>
+              <td><code>string</code></td>
+              <td><em>null or defined in &lt;a&gt; class</em></td>
+              <td>...</td>
+            </tr>
+          
+            <tr>
               <td>numbers</td>
+              <td><code>Numbers display</code></td>
               <td><code>boolean</code></td>
-              <td><span class="label label-primary">false</span></td>
-              <td>Show number for navigation</td>
+              <td><em>true</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>navigation</td>
+              <td><code>Navigation display</code></td>
+              <td><code>boolean</code></td>
+              <td><em>true</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>label</td>
+              <td><code>Label display</code></td>
+              <td><code>boolean</code></td>
+              <td><em>true</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>easing_default</td>
+              <td><code>Easing default</code></td>
+              <td><code>string</code></td>
+              <td><em>null</em></td>
+              <td>ease type</td>
+            </tr>
+          
+            <tr>
+              <td>thumbs</td>
+              <td><code>Navigation with thumbs</code></td>
+              <td><code>boolean</code></td>
+              <td><em>false</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>hideTools</td>
+              <td><code>Hide numbers and navigation</code></td>
+              <td><code>boolean</code></td>
+              <td><em>false</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>fullscreen</td>
+              <td><code>Fullscreen mode</code></td>
+              <td><code>boolean</code></td>
+              <td><em>false</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>xml</td>
+              <td><code>Loading data from XML file</code></td>
+              <td><code>boolean</code></td>
+              <td><em>false</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>dots</td>
+              <td><code>Navigation with dots</code></td>
+              <td><code>boolean</code></td>
+              <td><em>false</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>show_randomly</td>
+              <td><code>Randomly sliders</code></td>
+              <td><code>boolean</code></td>
+              <td><em>false</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>onLoad</td>
+              <td><code>Callback</code></td>
+              <td><code>function</code></td>
+              <td><em>null</em></td>
+              <td>function</td>
+            </tr>
+          
+            <tr>
+              <td>numbers_align</td>
+              <td><code>Alignment of numbers/dots/thumbs</code></td>
+              <td><code>string</code></td>
+              <td><em>left</em></td>
+              <td>center, left, right</td>
+            </tr>
+          
+            <tr>
+              <td>preview</td>
+              <td><code>Preview with dots</code></td>
+              <td><code>boolean</code></td>
+              <td><em>false</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>focus</td>
+              <td><code>Focus slideshow</code></td>
+              <td><code>boolean</code></td>
+              <td><em>false</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>focus_position</td>
+              <td><code>Position of button focus slideshow</code></td>
+              <td><code>string</code></td>
+              <td><em>center</em></td>
+              <td>center, leftTop, rightTop, leftBottom, rightBottom</td>
+            </tr>
+          
+            <tr>
+              <td>controls</td>
+              <td><code>Option play/pause manually</code></td>
+              <td><code>boolean</code></td>
+              <td><em>false</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>controls_position</td>
+              <td><code>Position of button controls</code></td>
+              <td><code>string</code></td>
+              <td><em>center</em></td>
+              <td>center, leftTop, rightTop, leftBottom, rightBottom</td>
+            </tr>
+          
+            <tr>
+              <td>enable_navigation_keys</td>
+              <td><code>Enable navigation keys</code></td>
+              <td><code>boolean</code></td>
+              <td><em>false</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>with_animations</td>
+              <td><code>Specific animations to be used in random mode.</code></td>
+              <td><code>array</code></td>
+              <td><em>[]</em></td>
+              <td>["paralell", "glassBlock", "swapBars"]</td>
+            </tr>
+          
+            <tr>
+              <td>mouseOverButton</td>
+              <td><code>Function call to go over the navigation buttons</code></td>
+              <td><code>function</code></td>
+              <td><em>function() { $(this).stop().animate({opacity:0.5}, 200); }</em></td>
+              <td>function() { $(this).stop().animate({opacity:0.2}, 500); }</td>
+            </tr>
+          
+            <tr>
+              <td>mouseOutButton</td>
+              <td><code>Function call to go out the navigation buttons</code></td>
+              <td><code>function</code></td>
+              <td><em>function() { $(this).stop().animate({opacity:0.5}, 200); }</em></td>
+              <td>function() { $(this).stop().animate({opacity:0.2}, 500); }</td>
+            </tr>
+          
+            <tr>
+              <td>stop_over</td>
+              <td><code>Stop animation to move mouse over it.</code></td>
+              <td><code>boolean</code></td>
+              <td><em>true</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>auto_play</td>
+              <td><code>Sets whether the slideshow will start automatically</code></td>
+              <td><code>boolean</code></td>
+              <td><em>true</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>labelAnimation</td>
+              <td><code>Label animation type</code></td>
+              <td><code>string</code></td>
+              <td><em>slideUp</em></td>
+              <td>slideUp, left, right, fixed</td>
+            </tr>
+          
+            <tr>
+              <td>imageSwitched</td>
+              <td><code>Function call to change image</code></td>
+              <td><code>function</code></td>
+              <td><em>null</em></td>
+              <td>function</td>
+            </tr>
+          
+            <tr>
+              <td>progressbar</td>
+              <td><code>Displays progress bar</code></td>
+              <td><code>boolean</code></td>
+              <td><em>false</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>progressbar_css</td>
+              <td><code>CSS progress bar</code></td>
+              <td><code>boolean</code></td>
+              <td><em>false</em></td>
+              <td>true, false</td>
+            </tr>
+          
+            <tr>
+              <td>theme</td>
+              <td><code>Slideshow theme</code></td>
+              <td><code>string</code></td>
+              <td><em>null</em></td>
+              <td>minimalist, round, clean, square</td>
             </tr>
           
         </tbody>
