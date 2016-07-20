@@ -1,0 +1,14 @@
+{% set sub_title = "Minimalist theme" %}
+{% set current_page = "minimalist-theme" %}
+{% set current_theme = "minimalist" %}
+{% extends "partials/base.html" %}
+
+{% block content %}
+  <div class="main-content">
+    <h1>Minimalist theme</h1>
+    {% include "partials/theme_slides.html" %}
+    <div class="row">
+      {% include "partials/themes.html" %}
+    </div>
+  </div>
+{% endblock %}

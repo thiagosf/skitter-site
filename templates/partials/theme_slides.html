@@ -1,0 +1,12 @@
+<div class="skitter skitter-themed skitter-{{ current_theme }} with-dots">
+  <ul>
+    {% for item in slides.default %}
+      <li>
+        <a href="#{{ item.animation }}"><img src="{{ item.image }}" class="{{ item.animation }}" /></a>
+        <div class="label_text">
+          <p>{{ item.label | safe }}</p>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -5,24 +5,14 @@
   <div class="skitter-box">
     <div class="skitter skitter-large with-dots">
       <ul>
-        <li>
-          <a href="#cut"><img src="https://placeholdit.imgix.net/~text?txtsize=100&txt=1&w=1280&h=400" class="cut" /></a>
-          <div class="label_text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#see-more" class="btn btn-xs btn-warning">See more</a></p>
-          </div>
-        </li>
-        <li>
-          <a href="#swapBlocks"><img src="https://placeholdit.imgix.net/~text?txtsize=100&txt=2&w=1280&h=400" class="swapBlocks" /></a>
-          <div class="label_text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#see-more" class="btn btn-xs btn-warning">See more</a></p>
-          </div>
-        </li>
-        <li>
-          <a href="#swapBarsBack"><img src="https://placeholdit.imgix.net/~text?txtsize=100&txt=3&w=1280&h=400" class="swapBarsBack" /></a>
-          <div class="label_text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#see-more" class="btn btn-xs btn-warning">See more</a></p>
-          </div>
-        </li>
+        {% for item in slides.default %}
+          <li>
+            <a href="#{{ item.animation }}"><img src="{{ item.image }}" class="{{ item.animation }}" /></a>
+            <div class="label_text">
+              <p>{{ item.label | safe }}</p>
+            </div>
+          </li>
+        {% endfor %}
       </ul>
     </div>
   </div>

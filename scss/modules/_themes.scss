@@ -1,0 +1,35 @@
+.theme-item {
+  margin-bottom: 40px;
+  text-align: center;
+  &.theme-item-small {
+    &.active {
+      a {
+        background: $yellow;
+        pointer-events: none;
+      }
+    }
+    a {
+      padding: 20px 15px;
+    }
+    img {
+      width: 64px;
+    }
+    h2 {
+      font-size: 16px;
+    }
+  }
+  a {
+    transition: all 300ms;
+    background: $light-gray;
+    padding: 40px 20px;
+    display: block;
+    text-decoration: none;
+    &:hover {
+      background: $yellow;
+    }
+  }
+  h2 {
+    color: black;
+    margin-bottom: 0;
+  }
+}

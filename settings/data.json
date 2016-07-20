@@ -219,5 +219,46 @@
       "example": "$('.skitter-large').skitter('prev')",
       "return": "null"
     }
+  },
+  "themes": {
+    "default": {
+      "label": "Default",
+      "link": "/default-theme.html"
+    },
+    "clean": {
+      "label": "Clean",
+      "link": "/clean-theme.html"
+    },
+    "minimalist": {
+      "label": "Minimalist",
+      "link": "/minimalist-theme.html"
+    },
+    "round": {
+      "label": "Round",
+      "link": "/round-theme.html"
+    },
+    "square": {
+      "label": "Square",
+      "link": "/square-theme.html"
+    }
+  },
+  "slides": {
+    "default": [
+      {
+        "image": "https://placeholdit.imgix.net/~text?txtsize=100&txt=1&w=1280&h=400",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href=\"#see-more\" class=\"btn btn-xs btn-warning\">See more</a>",
+        "animation": "cube"
+      },
+      {
+        "image": "https://placeholdit.imgix.net/~text?txtsize=100&txt=2&w=1280&h=400",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href=\"#see-more\" class=\"btn btn-xs btn-warning\">See more</a>",
+        "animation": "cubeRandom"
+      },
+      {
+        "image": "https://placeholdit.imgix.net/~text?txtsize=100&txt=3&w=1280&h=400",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href=\"#see-more\" class=\"btn btn-xs btn-warning\">See more</a>",
+        "animation": "block"
+      }
+    ]
   }
 }

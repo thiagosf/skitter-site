@@ -1,0 +1,21 @@
+{% set sub_title = "Themes" %}
+{% set current_page = "themes" %}
+{% extends "partials/base.html" %}
+
+{% block content %}
+  <div class="main-content">
+    <h1>Themes</h1>
+    <div class="row">
+      {% for theme, item in themes %}
+        <div class="col-sm-6 col-md-4">
+          <div class="theme-item">
+            <a href="{{ item.link }}">
+              <p><img src="/images/theme-{{ theme }}.jpg" class="img-thumbnail img-rounded" alt="{{ item.label }} theme"></p>
+              <h2>{{ item.label }}</h2>
+            </a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
