@@ -3,11 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+      
+    
     <title>API &#149; Skitter</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
     <link href="/css/styles.css" type="text/css" media="all" rel="stylesheet" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" >
+
+    
+      
+    
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="http://www.skitter-slider.net/api.html">
+    <meta property="og:title" content="API &#149; Skitter">
+    <meta property="og:site_name" content="Skitter">
+    <meta property="og:description" content="Skitter is a free jQuery slider responsive with a multiple animations and options.">
+    <meta property="og:image" content="/share/facebook.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
   </head>
   <body>
     <nav class="navbar navbar-fixed-top">
@@ -18,7 +35,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar icon-bar-change"></span>
       </button>
-      <a href="#" class="github-link">
+      <a href="https://github.com/thiagosf/SkitterSlideshow" class="github-link">
         <img src="/svgs/github.svg" alt="Github">
       </a>
       <a class="navbar-brand" href="/">
@@ -42,12 +59,10 @@
         
           <li class="visible-xs "><a href="/themes.html">Themes</a></li>
         
-          <li class="visible-xs "><a href="/updatelog.html">Updatelog</a></li>
-        
           <li class="visible-xs "><a href="/comments.html">Comments</a></li>
         
         <li class="hidden-xs">
-          <a href="#" class="github-link github-md-link">
+          <a href="https://github.com/thiagosf/SkitterSlideshow" class="github-link github-md-link">
             <small class="hidden-xs">
               Fork me on <br>
               <strong>GitHub</strong>
@@ -76,23 +91,30 @@
   
     <li class=""><a href="/themes.html">Themes</a></li>
   
-    <li class=""><a href="/updatelog.html">Updatelog</a></li>
-  
     <li class=""><a href="/comments.html">Comments</a></li>
   
 </ul>
 <div class="buy-me-a-milk">
-  <a href="#">
-    <img src="/svgs/milk.svg">
-    Buy me a <strong>milk!</strong>
-    <small>with paypal</small>
-  </a>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="HX6GLMFNNJWVQ">
+    <!-- <input type="image" src="/images/skitter-donate-banner.jpg" border="0" name="submit" alt="Help support the development of this plugin!"> -->
+      <button type="submit">
+        <span>
+          <img src="/svgs/milk.svg">
+          Buy me a <strong>milk!</strong>
+          <small>with paypal</small>
+        </span>
+      </button>
+      <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
+    </form>
 </div>
-<div class="sidebar-banner">
+
+<!-- <div class="sidebar-banner">
   <div class="banner">
     Banner
   </div>
-</div>
+</div> -->
 
         </div>
         <div class="col-xs-12 col-sm-9 col-md-10">
@@ -150,15 +172,24 @@
 
     <footer class="main-footer">
   <div class="container-fluid">
+    <div class="develop-tools">
+      <p>
+        Developed with
+        <a href="http://gulpjs.com/">Gulp</a>,
+        <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>,
+        <a href="http://sass-lang.com/">SASS</a> and
+        <a href="https://github.com/thiagosf/skitter-site/blob/master/package.json">and many others.</a>
+      </p>
+    </div>
     <span class="phrase">
       Use for good
     </span>
     <span class="smile">: )</span>
   </div>
 </footer>
-<div class="small-banner visible-xs">
+<!-- <div class="small-banner visible-xs">
   <div class="banner">Banner</div>
-</div>
+</div> -->
 
 
     <script src="/js/vendor.js"></script>

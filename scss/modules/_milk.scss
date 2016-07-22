@@ -1,33 +1,44 @@
 .buy-me-a-milk {
   margin-top: 20px;
-  a {
-    transition: all 300ms;
-    text-align: center;
-    padding: 10px;
-    display: block;
-    border-radius: 2px;
-    color: white;
-    background: $blue;
-    font-style: italic;
-    font-size: 18px;
-    &:hover {
-      text-decoration: none;
-      background: $green;
-      @media (min-width: $screen-md-min) {
-        img {
-          animation: milk 700ms forwards ease-in-out;
+  form {
+    button {
+      width: 100%;
+      border: 0;
+      background: none;
+      padding: 0;
+      margin: 0;
+      &:hover {
+        span {
+          text-decoration: none;
+          background: $green;
+          @media (min-width: $screen-md-min) {
+            img {
+              animation: milk 700ms forwards ease-in-out;
+            }
+          }
         }
       }
-    }
-    img {
-      width: 64px;
-      height: 64px;
-      display: block;
-      margin: 0 auto 10px auto;
-    }
-    small {
-      font-size: 12px;
-      display: block;
+      span {
+        transition: all 300ms;
+        text-align: center;
+        padding: 10px;
+        display: block;
+        border-radius: 2px;
+        color: white;
+        background: $blue;
+        font-style: italic;
+        font-size: 18px;
+        img {
+          width: 64px;
+          height: 64px;
+          display: block;
+          margin: 0 auto 10px auto;
+        }
+        small {
+          font-size: 12px;
+          display: block;
+        }
+      }
     }
   }
 }

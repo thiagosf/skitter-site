@@ -3,10 +3,20 @@ footer.main-footer {
   background: $green;
   color: white;
   text-align: center;
-  div {
+  > div {
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
+    .develop-tools {
+      padding: 0 40px;
+      p {
+        font-size: 12px;
+        margin: 0 0 10px 0;
+        a {
+          color: #d4e157;
+        }
+      }
+    }
     span {
       &.phrase {
         font-style: italic;

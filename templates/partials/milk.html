@@ -1,7 +1,15 @@
 <div class="buy-me-a-milk">
-  <a href="#">
-    <img src="/svgs/milk.svg">
-    Buy me a <strong>milk!</strong>
-    <small>with paypal</small>
-  </a>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="HX6GLMFNNJWVQ">
+    <!-- <input type="image" src="/images/skitter-donate-banner.jpg" border="0" name="submit" alt="Help support the development of this plugin!"> -->
+      <button type="submit">
+        <span>
+          <img src="/svgs/milk.svg">
+          Buy me a <strong>milk!</strong>
+          <small>with paypal</small>
+        </span>
+      </button>
+      <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
+    </form>
 </div>

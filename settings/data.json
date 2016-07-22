@@ -1,13 +1,14 @@
 {
   "title": "Skitter &#149; Slideshow for anytime",
   "small_title": "Skitter",
+  "description": "Skitter is a free jQuery slider responsive with a multiple animations and options.",
+  "repo": "https://github.com/thiagosf/SkitterSlideshow",
   "nav": {
     "home": { "label": "Home", "link": "/" },
     "install": { "label": "Install", "link": "/install.html" },
     "options": { "label": "Options", "link": "/options.html" },
     "api": { "label": "API", "link": "/api.html" },
     "themes": { "label": "Themes", "link": "/themes.html" },
-    "updatelog": { "label": "Updatelog", "link": "/updatelog.html" },
     "comments": { "label": "Comments", "link": "/comments.html" }
   },
   "options": {
@@ -245,19 +246,34 @@
   "slides": {
     "default": [
       {
-        "image": "https://placeholdit.imgix.net/~text?txtsize=100&txt=1&w=1280&h=400",
-        "label": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href=\"#see-more\" class=\"btn btn-xs btn-warning\">See more</a>",
-        "animation": "cube"
+        "image": "/images/mountains/1-seascape-with-rocks-in-ocean.jpg",
+        "label": "And after a long time, a new version of Skitter, now responsive. <a href=\"https://visualhunt.com/photo/7377/seascape-with-rocks-in-ocean/\" target=\"_blank\" class=\"btn btn-xs btn-primary\">Image credits</a>",
+        "animation": "cubeSize"
       },
       {
-        "image": "https://placeholdit.imgix.net/~text?txtsize=100&txt=2&w=1280&h=400",
-        "label": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href=\"#see-more\" class=\"btn btn-xs btn-warning\">See more</a>",
-        "animation": "cubeRandom"
+        "image": "/images/mountains/2-utah-mountain-sky-nature-golden-hour-sunset.jpg",
+        "label": "With lots of animations, create amazing slides.. <a href=\"https://visualhunt.com/photo/10330/\" target=\"_blank\" class=\"btn btn-xs btn-primary\">Image credits</a>",
+        "animation": "horizontal"
       },
       {
-        "image": "https://placeholdit.imgix.net/~text?txtsize=100&txt=3&w=1280&h=400",
-        "label": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href=\"#see-more\" class=\"btn btn-xs btn-warning\">See more</a>",
-        "animation": "block"
+        "image": "/images/mountains/3-sand-mountain-clouds.jpg",
+        "label": "Use navigation with points, arrows, or numbers.. <a href=\"https://visualhunt.com/photo/5653/\" target=\"_blank\" class=\"btn btn-xs btn-primary\">Image credits</a>",
+        "animation": "showBars"
+      },
+      {
+        "image": "/images/mountains/4-landscape-with-tree-hills-and-lake.jpg",
+        "label": "Place a progress bar between slides. <a href=\"https://visualhunt.com/photo/12320/landscape-with-tree-hills-and-lake/\" target=\"_blank\" class=\"btn btn-xs btn-primary\">Image credits</a>",
+        "animation": "showBarsRandom"
+      },
+      {
+        "image": "/images/mountains/5-aurora-borealis-over-mountains-at-night.jpg",
+        "label": "Some themes for you to use, but you can create your own. <a href=\"https://visualhunt.com/photo/6185/aurora-borealis-over-mountains-at-night/\" target=\"_blank\" class=\"btn btn-xs btn-primary\">Image credits</a>",
+        "animation": "tube"
+      },
+      {
+        "image": "/images/mountains/6-lake-powell-page-arizona-water-reservoir-landscape.jpg",
+        "label": "Finally: have fun! <a href=\"https://visualhunt.com/photo/13958/\" target=\"_blank\" class=\"btn btn-xs btn-primary\">Image credits</a>",
+        "animation": "paralell"
       }
     ]
   }

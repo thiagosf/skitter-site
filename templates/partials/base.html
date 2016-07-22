@@ -3,11 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% if sub_title %}{{ sub_title }} &#149; {{ small_title | safe }}{% else %}{{ title | safe }}{% endif %}</title>
+    {% set full_title = title %}
+    {% if sub_title %}
+      {% set full_title = sub_title + " &#149; " + small_title %}
+    {% endif %}
+    <title>{{ full_title | safe }}</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
     <link href="/css/styles.css" type="text/css" media="all" rel="stylesheet" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" >
+
+    {% if current_page != 'home' %}
+      {% set current_page_name = current_page + ".html" %}
+    {% endif %}
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="http://www.skitter-slider.net/{{ current_page_name }}">
+    <meta property="og:title" content="{{ full_title | safe }}">
+    <meta property="og:site_name" content="{{ small_title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="/share/facebook.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
   </head>
   <body>
     {% include "partials/top_nav.html" %}

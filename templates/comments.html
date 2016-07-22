@@ -1,0 +1,25 @@
+{% set sub_title = "Themes" %}
+{% set current_page = "themes" %}
+{% extends "partials/base.html" %}
+
+{% block content %}
+  <div class="main-content">
+    <h1>Comments</h1>
+    <div class="comments-box">
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'http://www.skitter-slider.net';
+          this.page.identifier = 'SKITTER-SITE';
+        };
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//skitter.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    </div>
+  </div>
+{% endblock %}

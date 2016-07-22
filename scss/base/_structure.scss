@@ -1,6 +1,6 @@
 body {
   padding-top: 80px;
-  padding-bottom: 73px;
+  // padding-bottom: 73px;
   @media (min-width: $screen-sm-min) {
     padding-bottom: 0;
   }
@@ -47,6 +47,26 @@ ul, ol {
 .skitter-large,
 .skitter-themed {
   max-width: 1280px;
+  .label_skitter {
+    p {
+      line-height: 1.4;
+      font-size: 12px;
+      @media (min-width: $screen-sm-min) {
+        font-size: 16px;
+      }
+      .btn-xs {
+        line-height: 1.2;
+        font-size: 12px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        @media (min-width: $screen-sm-min) {
+          font-size: 14px;
+          padding-top: 1px;
+          padding-bottom: 1px;
+        }
+      }
+    }
+  }
 }
 
 .skitter-box {

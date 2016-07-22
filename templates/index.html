@@ -51,14 +51,14 @@
       <hr>
     </div>
     <h2>Start now!</h2>
-    <div class="row">
+    <ul>
       {% for page, item in nav %}
         {% if page != "home" %}
-          <div class="col-sm-6 col-md-4">
-            <a href="{{ item.link }}" class="btn btn-block btn-lg btn-warning btn-with-margin">{{ item.label }}</a>
-          </div>
+          <li>
+            <a href="{{ item.link }}">{{ item.label }}</a>
+          </li>
         {% endif %}
       {% endfor %}
-    </div>
+    </ul>
   </div>
 {% endblock %}

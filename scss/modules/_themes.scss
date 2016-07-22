@@ -31,5 +31,14 @@
   h2 {
     color: black;
     margin-bottom: 0;
+    font-size: 18px;
+    @media (min-width: $screen-sm-min) {
+      font-size: 26px;
+    }
+  }
+  img {
+    max-width: 180px;
+    @media (min-width: $screen-sm-min) {
+    }
   }
 }
