@@ -2,7 +2,7 @@
   "title": "Skitter &#149; Slideshow for anytime",
   "small_title": "Skitter",
   "description": "Skitter is a free jQuery slider responsive with a multiple animations and options.",
-  "repo": "https://github.com/thiagosf/SkitterSlideshow",
+  "repo": "https://github.com/thiagosf/skitter",
   "nav": {
     "home": { "label": "Home", "link": "/" },
     "install": { "label": "Install", "link": "/install.html" },
