@@ -10,8 +10,12 @@ footer.main-footer {
     .develop-tools {
       padding: 0 40px;
       p {
-        font-size: 12px;
-        margin: 0 0 10px 0;
+        font-size: 14px;
+        margin: 0 0 20px 0;
+        @media (min-width: $screen-sm-min) {
+          margin: 0 0 10px 0;
+          font-size: 12px;
+        }
         a {
           color: #d4e157;
         }

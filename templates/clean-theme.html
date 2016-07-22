@@ -1,11 +1,12 @@
 {% set sub_title = "Clean theme" %}
-{% set current_page = "clean-theme" %}
+{% set current_page = "themes" %}
 {% set current_theme = "clean" %}
 {% extends "partials/base.html" %}
 
 {% block content %}
   <div class="main-content">
     <h1>Clean theme</h1>
+    {% include "partials/share.html" %}
     {% include "partials/theme_slides.html" %}
     <div class="row">
       {% include "partials/themes.html" %}

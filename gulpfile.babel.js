@@ -15,6 +15,7 @@ import sourcemaps from 'gulp-sourcemaps'
 import source from 'vinyl-source-stream'
 import nunjucks from 'gulp-nunjucks'
 import fs from 'fs'
+import htmlmin from 'gulp-htmlmin'
 
 // Configuration for Gulp
 const config = {
@@ -95,10 +96,15 @@ gulp.task('template', () => {
     .pipe(nunjucks.compile(settings_data))
     .pipe(gulp.dest('./public'))
 })
+gulp.task('template-compress', ['template'], function() {
+  return gulp.src('public/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('public'))
+})
 
 // Templates watch
 gulp.task('template:watch', () => {
-  return gulp.watch(['./templates/**/*.html', './settings/*.json'], ['template'])
+  return gulp.watch(['./templates/**/*.html', './settings/*.json'], ['template-compress'])
 })
 
 // Webserver
@@ -115,4 +121,4 @@ gulp.task('ws', ['vendor', 'sass:watch', 'template:watch', 'scripts'], () => {
 })
 
 // Build
-gulp.task('dist', ['template', 'vendor', 'compress', 'sass'])
+gulp.task('dist', ['template-compress', 'vendor', 'compress', 'sass'])
