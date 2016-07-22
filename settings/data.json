@@ -60,7 +60,7 @@
       "accept": "true, false",
       "type": "boolean"
     },
-    "hideTools": {
+    "hide_tools": {
       "label": "Hide numbers and navigation",
       "default": "false",
       "accept": "true, false",
@@ -168,7 +168,7 @@
       "accept": "true, false",
       "type": "boolean"
     },
-    "labelAnimation": {
+    "label_animation": {
       "label": "Label animation type",
       "default": "slideUp",
       "accept": "slideUp, left, right, fixed",
