@@ -16,6 +16,7 @@ import source from 'vinyl-source-stream'
 import nunjucks from 'gulp-nunjucks'
 import fs from 'fs'
 import htmlmin from 'gulp-htmlmin'
+import sitemap from './sitemap.js'
 
 // Configuration for Gulp
 const config = {
@@ -107,6 +108,17 @@ gulp.task('template:watch', () => {
   return gulp.watch(['./templates/**/*.html', './settings/*.json'], ['template-compress'])
 })
 
+// Sitemap generator
+gulp.task('sitemap', () => {
+  return gulp.src('./public/*.html')
+    .pipe(sitemap({
+      site_url: 'http://www.skitter-slider.net',
+      file_name: 'sitemap.xml',
+      dest: 'public'
+    }))
+    // .pip(gulp.dest('public'))
+})
+
 // Webserver
 gulp.task('ws', ['vendor', 'sass:watch', 'template:watch', 'scripts'], () => {
   return gulp.src('public')
@@ -121,4 +133,4 @@ gulp.task('ws', ['vendor', 'sass:watch', 'template:watch', 'scripts'], () => {
 })
 
 // Build
-gulp.task('dist', ['template-compress', 'vendor', 'compress', 'sass'])
+gulp.task('dist', ['template-compress', 'sitemap', 'vendor', 'compress', 'sass'])

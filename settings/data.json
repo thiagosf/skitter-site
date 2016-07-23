@@ -252,12 +252,12 @@
       },
       {
         "image": "/images/mountains/2-utah-mountain-sky-nature-golden-hour-sunset.jpg",
-        "label": "With lots of animations, create amazing slides.. <a href=\"https://visualhunt.com/photo/10330/\" target=\"_blank\" class=\"btn btn-xs btn-primary\">Image credits</a>",
+        "label": "With lots of animations, create amazing slides. <a href=\"https://visualhunt.com/photo/10330/\" target=\"_blank\" class=\"btn btn-xs btn-primary\">Image credits</a>",
         "animation": "horizontal"
       },
       {
         "image": "/images/mountains/3-sand-mountain-clouds.jpg",
-        "label": "Use navigation with points, arrows, or numbers.. <a href=\"https://visualhunt.com/photo/5653/\" target=\"_blank\" class=\"btn btn-xs btn-primary\">Image credits</a>",
+        "label": "Use navigation with points, arrows, or numbers. <a href=\"https://visualhunt.com/photo/5653/\" target=\"_blank\" class=\"btn btn-xs btn-primary\">Image credits</a>",
         "animation": "showBars"
       },
       {
