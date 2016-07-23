@@ -30,7 +30,7 @@ module.exports = (options) => {
         let priority = '0.5'
         if (filename == 'index.html') {
           filename = ''
-          priority = '0.9'
+          priority = '0.8'
         }
         xml.push('<url>')
           xml.push('<loc>' + config.site_url + '/' + filename + '</loc>')

@@ -1,0 +1,23 @@
+{% set sub_title = "404 Page not found" %}
+{% set current_page = "page_not_found" %}
+{% extends "partials/base.html" %}
+
+{% block content %}
+  <div class="main-content">
+    <div class="page-not-found-box">
+      <img src="/images/skeeter.jpg" class="img-thumbnail img-circle skeeter">
+      <p><em>Ãnnn.. I think it was not him that you were looking for.</em></p>
+    </div>
+    <hr>
+    <h2>Try this:</h2>
+    <ul>
+      {% for page, item in nav %}
+        {% if page != "home" %}
+          <li>
+            <a href="{{ item.link }}">{{ item.label }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
