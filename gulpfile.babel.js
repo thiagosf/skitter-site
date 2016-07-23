@@ -133,4 +133,4 @@ gulp.task('ws', ['vendor', 'sass:watch', 'template:watch', 'scripts'], () => {
 })
 
 // Build
-gulp.task('dist', ['template', 'sitemap', 'vendor', 'compress', 'sass'])
+gulp.task('dist', ['template-compress', 'sitemap', 'vendor', 'compress', 'sass'])
