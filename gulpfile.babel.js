@@ -112,11 +112,10 @@ gulp.task('template:watch', () => {
 gulp.task('sitemap', () => {
   return gulp.src('./public/*.html')
     .pipe(sitemap({
-      site_url: 'http://www.skitter-slider.net',
+      site_url: 'http://skitter-slider.net',
       file_name: 'sitemap.xml',
       dest: 'public'
     }))
-    // .pip(gulp.dest('public'))
 })
 
 // Webserver

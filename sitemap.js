@@ -34,7 +34,6 @@ module.exports = (options) => {
         }
         xml.push('<url>')
           xml.push('<loc>' + config.site_url + '/' + filename + '</loc>')
-          xml.push('<lastmod>2016-07-22 20:50:00</lastmod>')
           xml.push('<changefreq>monthly</changefreq>')
           xml.push('<priority>' + priority + '</priority>')
         xml.push('</url>')
