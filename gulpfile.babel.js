@@ -55,6 +55,10 @@ const bundle = () => {
     .pipe(source(config.js.outputFile))
     .pipe(buffer())
     .pipe(gulp.dest(config.js.outputDir))
+    .pipe(minify({
+      ext: { min:'.min.js' }
+    }))
+    .pipe(gulp.dest(config.js.outputDir))
 }
 const customOpts = {
   entries: [config.js.src],

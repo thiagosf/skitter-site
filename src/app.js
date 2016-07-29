@@ -26,4 +26,8 @@ $(() => {
       }
     }
   })
+  $('.close-banner').on('click', function(e) {
+    e.preventDefault()
+    $(this).closest('.small-banner').addClass('hide')
+  })
 })

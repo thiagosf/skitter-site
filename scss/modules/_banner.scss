@@ -1,19 +1,46 @@
 .small-banner {
-  display: none;
-  // position: fixed;
-  // z-index: 1000;
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
-  // background: rgba(white, .7);
-  // .banner {
-  //   height: 70px;
-  //   background: black;
-  //   margin: 1px;
-  //   color: white;
-  //   text-align: center;
-  //   line-height: 4;
-  // }
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(white, .7);
+  &.hide {
+    display: none;
+  }
+  @media (min-width: $screen-sm-min) {
+    left: auto;
+  }
+  .banner {
+    height: 70px;
+    background: black;
+    margin: 1px;
+    color: white;
+    text-align: center;
+    line-height: 4;
+    @media (min-width: $screen-sm-min) {
+      width: auto;
+      height: auto;
+    }
+  }
+  .close-banner {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: -40px;
+    background: black;
+    color: white;
+    padding: 0 10px;
+    border-radius: 2px;
+    transition: all 300ms;
+    @media (min-width: $screen-sm-min) {
+      display: block;
+    }
+    &:hover {
+      text-decoration: none;
+      background: $brand-danger;
+    }
+  }
 }
 .sidebar-banner {
   display: none;
