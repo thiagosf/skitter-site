@@ -2,7 +2,7 @@
   <div class="col-xs-6 {% if theme == current_theme %}col-md-4{% else %}col-md-2{% endif %}">
     <div class="theme-item theme-item-small {% if theme == current_theme %}active{% endif %}">
       <a href="{{ item.link }}">
-        <p><img src="/images/theme-{{ theme }}.jpg" class="img-thumbnail img-rounded" alt="{{ item.label }} theme"></p>
+        <p><img src="{{ cdn }}/images/theme-{{ theme }}.jpg" class="img-thumbnail img-rounded" alt="{{ item.label }} theme"></p>
         <h2>{{ item.label }}</h2>
       </a>
     </div>

@@ -7,7 +7,7 @@
       <ul>
         {% for item in slides.default %}
           <li>
-            <a href="#{{ item.animation }}"><img src="{{ item.image }}" class="{{ item.animation }}" /></a>
+            <a href="#{{ item.animation }}"><img src="{{ cdn }}{{ item.image }}" class="{{ item.animation }}" /></a>
             <div class="label_text">
               <p>{{ item.label | safe }}</p>
             </div>
@@ -23,7 +23,7 @@
       <div class="row">
         <div class="col-xs-6 col-sm-4">
           <div class="item-feature">
-            <img src="/svgs/feature-animations.svg">
+            <img src="{{ cdn }}/svgs/feature-animations.svg">
             <div class="title">
               Many <strong>animations</strong>
             </div>
@@ -31,7 +31,7 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div class="item-feature">
-            <img src="/svgs/feature-responsive.svg">
+            <img src="{{ cdn }}/svgs/feature-responsive.svg">
             <div class="title">
               <strong>Responsive</strong> support
             </div>
@@ -39,7 +39,7 @@
         </div>
         <div class="col-xs-6 col-sm-4">
           <div class="item-feature">
-            <img src="/svgs/feature-options.svg">
+            <img src="{{ cdn }}/svgs/feature-options.svg">
             <div class="title">
               Several <strong>options</strong>
             </div>
