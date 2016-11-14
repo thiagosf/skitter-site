@@ -62,11 +62,13 @@
 });</code></pre>
     <h3>Links</h3>
     <ul>
-      <li><a href="#">Options</a></li>
-      <li><a href="#">Events</a></li>
-      <li><a href="#">Updates</a></li>
-      <li><a href="#">Customizations</a></li>
-      <li><a href="#">Comments</a></li>
+      {% for page, item in nav %}
+        {% if page != "home" and page != "install" %}
+          <li>
+            <a href="{{ item.link }}">{{ item.label }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
     </ul>
   </div>
 {% endblock %}

@@ -8,6 +8,7 @@
     "url": "https://github.com/thiagosf/skitter-site.git"
   },
   "scripts": {
+    "start": "node_modules/.bin/gulp ws",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

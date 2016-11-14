@@ -40,7 +40,7 @@
     },
     "navigation": {
       "label": "Navigation display",
-      "default": "true",
+      "default": "false",
       "accept": "true, false",
       "type": "boolean"
     },
