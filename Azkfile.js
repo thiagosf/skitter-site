@@ -8,6 +8,7 @@ systems({
     image: {"docker": "azukiapp/node"},
     provision: [
       "npm install",
+      "node_modules/.bin/bower install --allow-root",
     ],
     workdir: "/azk/#{manifest.dir}",
     shell: "/bin/bash",
@@ -16,6 +17,7 @@ systems({
     mounts: {
       '/azk/#{manifest.dir}': sync("."),
       '/azk/#{manifest.dir}/node_modules': persistent("./node_modules"),
+      '/azk/#{manifest.dir}/bower_components': persistent("./bower_components"),
     },
     scalable: {"default": 1},
     http: {
