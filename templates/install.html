@@ -61,15 +61,9 @@
 <pre class="language language-javascript"><code>$(function() {
   $(&#039;.skitter-large&#039;).skitter();
 });</code></pre>
-    <h3>Links</h3>
-    <ul>
-      {% for page, item in nav %}
-        {% if page != "home" and page != "install" %}
-          <li>
-            <a href="{{ item.link }}">{{ item.label }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+    <div class="navigation-footer">
+      <a href="/" class="prev-page">Back to home</a>
+      <a href="/options.html" class="next-page">See all options</a>
+    </div>
   </div>
 {% endblock %}

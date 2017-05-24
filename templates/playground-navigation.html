@@ -1,0 +1,26 @@
+{% set sub_title = "Playground - Navigation" %}
+{% set current_page = "playground" %}
+{% extends "partials/base.html" %}
+
+{% block content %}
+  <div class="main-content">
+    <h1>Playground - Navigation</h1>
+    {% include "partials/share.html" %}
+    {% include "partials/full_banner.html" %}
+    {% include "partials/playground_links.html" %}
+    <div class="skitter-box">
+      <div class="skitter skitter-playground skitter-navigation">
+        {% include "partials/images_list.html" %}
+      </div>
+    </div>
+    {% include "partials/full_banner.html" %}
+    <div class="code-box">
+      <h3>Your code!</h3>
+<pre class="language language-javascript"><code>$(&#039;.skitter-large&#039;).skitter({
+  navigation: true,
+  dots: false
+});</code></pre>
+    </div>
+    {% include "partials/playground_footer_navigation.html" %}
+  </div>
+{% endblock %}

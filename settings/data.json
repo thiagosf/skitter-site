@@ -4,13 +4,13 @@
   "description": "Skitter is a free jQuery slider responsive with a multiple animations and options.",
   "repo": "https://github.com/thiagosf/skitter",
   "cdn": "//skitterp-4b51.kxcdn.com",
-  "cdn2": "",
   "nav": {
     "home": { "label": "Home", "link": "/" },
     "install": { "label": "Install", "link": "/install.html" },
     "options": { "label": "Options", "link": "/options.html" },
     "api": { "label": "API", "link": "/api.html" },
     "themes": { "label": "Themes", "link": "/themes.html" },
+    "playground": { "label": "Playground", "link": "/playground.html" },
     "comments": { "label": "Comments", "link": "/comments.html" }
   },
   "options": {

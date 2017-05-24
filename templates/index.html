@@ -4,25 +4,16 @@
 {% block content %}
   <div class="skitter-box">
     <div class="skitter skitter-large with-dots">
-      <ul>
-        {% for item in slides.default %}
-          <li>
-            <a href="#{{ item.animation }}"><img src="{{ cdn }}{{ item.image }}" class="{{ item.animation }}" /></a>
-            <div class="label_text">
-              <p>{{ item.label | safe }}</p>
-            </div>
-          </li>
-        {% endfor %}
-      </ul>
+      {% include "partials/images_list.html" %}
     </div>
   </div>
   <div class="main-content">
-    <p class="text-large"><strong>Skitter</strong> is a free jQuery slider responsive with a multiple animations and options.</p>
+    <p class="text-large text-highlight-description"><strong>Skitter</strong> is a free jQuery slider responsive with a multiple animations and options.</p>
     {% include "partials/share.html" %}
     {% include "partials/full_banner.html" %}
     <div class="features-box">
       <div class="row">
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-12 col-sm-4">
           <div class="item-feature">
             <img src="{{ cdn }}/svgs/feature-animations.svg">
             <div class="title">
@@ -30,7 +21,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-12 col-sm-4">
           <div class="item-feature">
             <img src="{{ cdn }}/svgs/feature-responsive.svg">
             <div class="title">
@@ -38,7 +29,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-12 col-sm-4">
           <div class="item-feature">
             <img src="{{ cdn }}/svgs/feature-options.svg">
             <div class="title">
@@ -52,15 +43,8 @@
       {% include "partials/milk.html" %}
       <hr>
     </div>
-    <h2>Start now!</h2>
-    <ul>
-      {% for page, item in nav %}
-        {% if page != "home" %}
-          <li>
-            <a href="{{ item.link }}">{{ item.label }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+    <div class="navigation-footer">
+      <a href="/install.html" class="next-page">Start now!</a>
+    </div>
   </div>
 {% endblock %}

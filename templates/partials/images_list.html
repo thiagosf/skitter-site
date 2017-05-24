@@ -1,0 +1,10 @@
+<ul>
+  {% for item in slides.default %}
+    <li>
+      <a href="#{{ item.animation }}"><img src="{{ cdn }}{{ item.image }}" class="{{ item.animation }}" /></a>
+      <div class="label_text">
+        <p>{{ item.label | safe }}</p>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

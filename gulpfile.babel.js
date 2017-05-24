@@ -97,6 +97,7 @@ gulp.task('sass:watch', () => {
 // Templates
 gulp.task('template', () => {
   const settings_data = JSON.parse(fs.readFileSync('./settings/data.json'))
+  settings_data.NODE_ENV = process.env.NODE_ENV
   return gulp.src('./templates/*.html')
     .pipe(nunjucks.compile(settings_data))
     .pipe(gulp.dest('./public'))
