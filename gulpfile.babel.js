@@ -124,7 +124,7 @@ gulp.task('sitemap', () => {
 })
 
 // Webserver
-gulp.task('ws', ['vendor', 'sass:watch', 'template:watch', 'scripts'], () => {
+gulp.task('ws', ['vendor', 'sass', 'template', 'sass:watch', 'template:watch', 'scripts'], () => {
   return gulp.src('public')
     .pipe(webserver({
       host: '0.0.0.0',
