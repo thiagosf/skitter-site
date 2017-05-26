@@ -38,6 +38,14 @@ $(() => {
     numbers: true,
     responsive: responsive
   })
+  $('.skitter-progressbar').skitter({
+    progressbar: true,
+    responsive: responsive
+  })
+  $('.skitter-focus').skitter({
+    focus: true,
+    responsive: responsive
+  })
   $('.close-banner').on('click', function(e) {
     e.preventDefault()
     $(this).closest('.small-banner').addClass('hide')

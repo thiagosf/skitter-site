@@ -72,12 +72,11 @@ ul, ol {
   }
 }
 
-.skitter-thumb {
-  margin-bottom: 80px;
-}
-.skitter-dots,
-.skitter-dots-with-preview {
+.skitter-playground {
   margin-bottom: 60px;
+  &.skitter-thumb {
+    margin-bottom: 80px;
+  }
 }
 
 .skitter-box {
