@@ -203,7 +203,7 @@
     "responsive": {
       "label": "Responsive options",
       "default": "null",
-      "accept": "{ responsive: { small: {animation: 'fade', max_width: 768, suffix: '-small' }, medium: { animation: 'directionRight', max_width: 1024, suffix: '-medium' } } }",
+      "accept": "{ responsive: { small: { animation: 'fade', max_width: 768, suffix: '-small' }, medium: { animation: 'directionRight', max_width: 1024, suffix: '-medium' } } }",
       "type": "object"
     }
   },
