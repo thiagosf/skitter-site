@@ -136,5 +136,10 @@ gulp.task('ws', ['vendor', 'sass', 'template', 'sass:watch', 'template:watch', '
     }))
 })
 
+// Exit
+gulp.task('exit', ['template-compress', 'sitemap', 'vendor', 'compress', 'sass'], () => {
+  process.exit(0)
+})
+
 // Build
-gulp.task('dist', ['template-compress', 'sitemap', 'vendor', 'compress', 'sass'])
+gulp.task('dist', ['template-compress', 'sitemap', 'vendor', 'compress', 'sass', 'exit'])
