@@ -1,16 +1,16 @@
-# Skitter`s site
+# Skitter's site
 
 Development:
 
 ```bash
-azk start -vv 
-azk logs -f
+docker-compose up
 ```
 
 Build:
 
 ```bash
-azk shell -c 'npm run build'
+docker-compose up -d 
+docker-compose exec web bash -c "npm run build"
 ```
 
 :rocket:

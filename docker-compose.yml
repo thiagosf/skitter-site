@@ -1,0 +1,14 @@
+version: "3"
+services:
+  web:
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: .
+    image: skitter
+    container_name: skitter
+    ports:
+      - "8080:3000"
+    command: npm start
+    volumes:
+      - ./:/var/www
+      - /var/www/node_modules
