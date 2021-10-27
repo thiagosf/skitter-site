@@ -1,5 +1,5 @@
 body {
-  padding-top: 80px;
+  padding-top: 130px;
   padding-bottom: 73px;
   @media (min-width: $screen-sm-min) {
     padding-bottom: 0;
@@ -185,4 +185,24 @@ p.text-highlight-description {
 
 .text-center {
   text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.main-content {
+  min-height: 45vh;
 }

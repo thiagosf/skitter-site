@@ -42,28 +42,17 @@
     }
   }
 }
-.sidebar-banner {
-  display: none;
-  // margin-top: 20px;
-  // position: fixed;
-  // bottom: 1px;
-  // right: 1px;
-  // z-index: 1000;
+.square-banner {
+  margin-top: 20px;
   // .banner {
-  //   color: white;
-  //   height: 250px;
-  //   width: 250px;
-  //   background: black;
-  //   line-height: 14;
-  //   text-align: center;
+  //   // background: red;
+  //   // min-height: 250px;
   // }
 }
 .full-banner {
   margin: 0 0 20px 0;
-  .banner {
-    // background: black;
-    // @media (min-width: $screen-sm-min) {
-    //   min-height: 90px;
-    // }
-  }
+  // .banner {
+  //   // background: red;
+  //   // min-height: 90px;
+  // }
 }

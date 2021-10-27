@@ -1,5 +1,5 @@
 <nav class="navbar navbar-fixed-top">
-  <div class="container-fluid">
+  <div class="container-fluid d-flex justify-between items-center">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -16,6 +16,21 @@
         <strong>Skitter</strong>
         Slideshow for anytime
       </span>
+    </div>
+    <div class="top-banner">
+      <div class="banner d-flex justify-center items-center">
+        {% if NODE_ENV == "production" %}
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-5475009614982192"
+              data-ad-slot="6974376123"
+              data-ad-format="auto"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        {% endif %}
+      </div>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
