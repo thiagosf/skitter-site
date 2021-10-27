@@ -1,35 +1,42 @@
 <nav class="navbar navbar-fixed-top">
-  <div class="container-fluid d-flex justify-between items-center">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar icon-bar-change"></span>
-      </button>
-      <a href="{{ repo }}" class="github-link">
-        <img src="{{ cdn }}/svgs/github.svg" alt="Github">
-      </a>
-      <a class="navbar-brand" href="/">
-        <img src="{{ cdn }}/svgs/logo.svg" alt="Skitter">
-      </a>
-      <span class="site-title">
-        <strong>Skitter</strong>
-        Slideshow for anytime
-      </span>
-    </div>
-    <div class="top-banner">
-      <div class="banner d-flex justify-center items-center">
-        {% if NODE_ENV == "production" %}
-          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <ins class="adsbygoogle"
-              style="display:block"
-              data-ad-client="ca-pub-5475009614982192"
-              data-ad-slot="6974376123"
-              data-ad-format="auto"></ins>
-          <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-        {% endif %}
+  <div class="container-fluid d-flex items-center">
+    <div class="navbar-header d-flex justify-between items-center grow">
+      <div class="logo-box d-flex items-center">
+        <a class="navbar-brand" href="/">
+          <img src="{{ cdn }}/svgs/logo.svg" alt="Skitter">
+        </a>
+        <span class="site-title">
+          <strong>Skitter</strong>
+          Slideshow for anytime
+        </span>
+        <div class="top-banner">
+          <div class="banner d-flex justify-center items-center">
+            {% if NODE_ENV == "production" %}
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5475009614982192"
+              crossorigin="anonymous"></script>
+              <!-- skitter-top -->
+              <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-5475009614982192"
+                    data-ad-slot="5484544865"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+              <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar icon-bar-change"></span>
+        </button>
+        <a href="{{ repo }}" class="github-link">
+          <img src="{{ cdn }}/svgs/github.svg" alt="Github">
+        </a>
       </div>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
