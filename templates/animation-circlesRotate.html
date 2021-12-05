@@ -1,0 +1,16 @@
+{% set sub_title = "Animations" %}
+{% set current_page = "animations" %}
+{% set current_animation = "circlesRotate" %}
+{% extends "partials/base.html" %}
+
+{% block content %}
+  <div class="main-content">
+    <h1>Animation: {{current_animation}}</h1>
+    {% include "partials/share.html" %}
+    {% include "partials/animation_slides.html" %}
+    <div class="row row-no-gutters">
+      {% include "partials/animations.html" %}
+    </div>
+    {% include "partials/animation_footer_navigation.html" %}
+  </div>
+{% endblock %}

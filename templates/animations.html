@@ -1,0 +1,16 @@
+{% set sub_title = "Animations" %}
+{% set current_page = "animations" %}
+{% set current_animation = "" %}
+{% extends "partials/base.html" %}
+
+{% block content %}
+  <div class="main-content">
+    <h1>Animations</h1>
+    <p>Choose an animation to see it working:</p>
+    {% include "partials/share.html" %}
+    <div class="row row-no-gutters">
+      {% include "partials/animations.html" %}
+    </div>
+    {% include "partials/animation_footer_navigation.html" %}
+  </div>
+{% endblock %}

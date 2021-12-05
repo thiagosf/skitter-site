@@ -11,6 +11,7 @@
     "api": { "label": "API", "link": "/api.html" },
     "themes": { "label": "Themes", "link": "/themes.html" },
     "playground": { "label": "Playground", "link": "/playground.html" },
+    "animations": { "label": "Animations", "link": "/animations.html" },
     "comments": { "label": "Comments", "link": "/comments.html" }
   },
   "options": {
@@ -284,5 +285,42 @@
         "animation": "paralell"
       }
     ]
-  }
+  },
+  "animations": [
+    "cube",
+    "cubeRandom",
+    "block",
+    "cubeStop",
+    "cubeStopRandom",
+    "cubeHide",
+    "cubeSize",
+    "horizontal",
+    "showBars",
+    "showBarsRandom",
+    "tube",
+    "fade",
+    "fadeFour",
+    "paralell",
+    "blind",
+    "blindHeight",
+    "blindWidth",
+    "directionTop",
+    "directionBottom",
+    "directionRight",
+    "directionLeft",
+    "cubeSpread",
+    "glassCube",
+    "glassBlock",
+    "circles",
+    "circlesInside",
+    "circlesRotate",
+    "cubeShow",
+    "upBars",
+    "downBars",
+    "hideBars",
+    "swapBars",
+    "swapBarsBack",
+    "swapBlocks",
+    "cut"
+  ]
 }

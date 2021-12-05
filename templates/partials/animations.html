@@ -1,0 +1,9 @@
+{% for animation in animations %}
+  <div class="col-xs-6 {% if animation == current_animation %}col-md-3{% else %}col-md-3{% endif %}">
+    <div class="animation-item animation-item-small {% if animation == current_animation %}active{% endif %}">
+      <a href="animation-{{ animation }}.html">
+        <h2>{{ animation }}</h2>
+      </a>
+    </div>
+  </div>
+{% endfor %}

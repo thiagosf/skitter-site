@@ -1,0 +1,36 @@
+.animation-item {
+  margin: 1px;
+  text-align: center;
+  &.animation-item-small {
+    &.active {
+      a {
+        background: $yellow;
+        pointer-events: none;
+      }
+    }
+    a {
+      padding: 20px 15px;
+    }
+    h2 {
+      font-size: 16px;
+    }
+  }
+  a {
+    transition: all 300ms;
+    background: $light-gray;
+    padding: 40px 20px;
+    display: block;
+    text-decoration: none;
+    &:hover {
+      background: $yellow;
+    }
+  }
+  h2 {
+    color: black;
+    margin: 0;
+    font-size: 18px;
+    @media (min-width: $screen-sm-min) {
+      font-size: 26px;
+    }
+  }
+}
